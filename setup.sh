@@ -42,7 +42,6 @@ echo ">>> Installing Go-based Security Tools..."
 # --- RECON & SUBDOMAINS ---
 echo "Installing Recon tools..."
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-go install -v github.com/tomnomnom/assetfinder@latest
 
 # --- FUZZING & PATH DISCOVERY ---
 echo "Installing Fuzzing tool..."
@@ -50,6 +49,7 @@ go install -v github.com/ffuf/ffuf/v2@latest
 
 # --- VULNERABILITY SCANNING ---
 echo "Installing Scanning tools..."
+go install github.com/bitquark/shortscan/cmd/shortscan@latest
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 go install -v github.com/projectdiscovery/katana/cmd/katana@latest
 go install -v github.com/hahwul/dalfox/v2@latest # XSS Scanner
